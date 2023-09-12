@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Belanosima&family=Kalam:wght@300&family=Lato&family=Poppins:wght@300;400&family=Roboto:wght@100;400;700&family=Ubuntu:wght@300;400&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+}
+.header ul{
+    display: flex;
+    list-style: none;
+}   
+.header ul li a{
+    color: black;
+    text-decoration: none;
+}
+.header ul li{
+    margin: 0 2% 0 0;
+}
+.header ul li h3{
+    margin: 0;
+    font-family: 'Kalam', cursive;
+    font-size: 20px;
+}   
+.chef-icon{
+    width: 30%;
+    height: 10%;
+    object-fit: cover;
+}
+.header ul li div{
+    display: flex;
+    align-items: center;
+    width: 10vmax;
+}
+.header-section-2{
+    margin: 0.8% 0 0 0;
+    display: flex;
+}
+.header-section-2 li a{
+    margin: 0 35px 0 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+.main-section{
+    width: 99.8%;
+    height: 89vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://i.ibb.co/Vq49TL2/ingridents.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 88vh;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    letter-spacing: 6px;
+    font-size: 40px;
+}
+.main-section div{
+   display: flex;
+   flex-direction: column;
+   margin: -10% 0 0 0;
+   align-items: center;
+}
+.main-section div button{
+    background: rgb(117, 117, 247);
+    border: none;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.header-section-3{
+    display: none;
+}
+.show-navigation{
+    flex-direction: column;
+    display: none;
+    width: 20.5%;
+    margin: -1%;
+    position: absolute;
+    left: 75%;
+    top: 1.5%;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    background-color: rgb(236, 236, 236);
+    padding: 5px;
+    border-radius: 5px;
+}
+.show-navigation button{    
+    position: relative;
+    left: 66%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10%;
+    width: 40%;
+}
+.show-navigation button img{
+    width: 100%;
+}
+@media(max-width: 700px){
+    .main-section{
+        background-image: url("https://i.ibb.co/fXyxrLV/vertical-recipe-image.png");
+    }
+}
+@media(max-width: 821px){
+    .header-section-2{
+        display: none;
+    }
+    .header ul li div{
+        width: 22vmax;
+    }
+    .header-section-3{
+        display: block;
+    }
+    .header-section-3 button img{
+        width: 100%;
+    }
+    .header-section-3 button{
+        width: 10%;
+        background: none;
+        border: none;
+        position: absolute;
+        left: 87%;
+        top: 3.5%;
+    }
+    .show-navigation{
+        display: block; 
+    }
+}
+@media(max-width: 820px){
+    .header-section-3 button{
+        top: 2.5%;
+    }
+    .header-section-3 button{
+        width: 7%;
+    }
+}

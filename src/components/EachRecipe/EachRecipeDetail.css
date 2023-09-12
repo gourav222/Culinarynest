@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Belanosima&family=Kalam:wght@300&family=Lato&family=Poppins:wght@300;400&family=Roboto:wght@100;400;700&family=Ubuntu:wght@300;400&display=swap");
+.recipe-image-back-to-recipe {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 40%;
+  /* border: 2px solid red; */
+}
+.each-recipe-detail {
+  /* border: 2px solid red; */
+  width: 80%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 8%;
+  padding: 2%;
+}
+.recipe-ingrident-details {
+  width: 60%;
+  position: relative;
+  /* border: 2px solid blue; */
+  font-family: "Ubuntu", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  letter-spacing: 2px;
+}
+.recipe-image-back-to-recipe img {
+  width: 60%;
+  position: relative;
+  left: 5%;
+}
+.recipe-image-back-to-recipe button {
+  width: 40%;
+  position: relative;
+  left: 5%;
+  margin: 0% 0 5% 0;
+  height: 40px;
+  background: rgba(235, 136, 5, 0.679);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1.1vmax;
+  font-family: "Ubuntu", sans-serif;
+  cursor: pointer;
+}
+.recipe-image-back-to-recipe button a{
+    text-decoration: none;
+    color: white;
+}
+.recipe-image-back-to-recipe button:hover {
+  background: rgb(117, 117, 247);
+  transition: all 0.3s linear;
+}
+.recipe-name-url h4 {
+  color: rgb(190, 111, 0);
+}
+.recipe-name-url button {
+  padding: 0.8%;
+  letter-spacing: 1.8px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: large;
+  background: rgba(2, 149, 4, 0.603);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.recipe-name-url button a{
+    text-decoration: none;
+    color: white;
+}
+.recipe-name-url button:hover {
+  background: rgba(0, 189, 199, 0.814);
+  transition: all 0.3s linear;
+}
+.ingridents-heading {
+  letter-spacing: 3px !important;
+}
+.ingrident-list {
+  -webkit-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.75);
+  width: 75%;
+  position: relative;
+  left: 1%;
+  border-radius: 2px;
+}
+.ingrident-list-item{
+    padding: 2%;
+    border-bottom: 1px solid rgb(185, 185, 185);
+}
+@media (max-width: 650px) {
+  .each-recipe-detail {
+    flex-direction: column;
+    align-items: center;
+  }
+  .recipe-image-back-to-recipe {
+    width: 100%;
+    align-items: center;
+    position: relative;
+  }
+  .recipe-ingrident-details {
+    width: 100%;
+    margin: 2% 0 0 0;
+  }
+  .recipe-image-back-to-recipe button {
+    font-size: 1.8vmax;
+    left: -30%;
+  }
+  .recipe-image-back-to-recipe img {
+    left: 0;
+    width: 80%;
+  }
+}
