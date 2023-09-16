@@ -150,3 +150,14 @@
   text-decoration: none;
   color: black;
 }
+@media (max-width: 821px){
+  .add-ingridents img{
+    width: 3vmax;
+  }
+  .add-ingridents-to-list{
+    font-size: 20px;
+  }
+  .submit-ingridents{
+    width: 12vmax;
+  }
+}

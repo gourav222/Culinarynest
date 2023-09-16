@@ -47,6 +47,7 @@ const Navigations = ({ setShowNavigation, showNavigation }) => {
         onChange={(e) => {
           recipeByDishType(e.target.value);
           navigate("/recipes");
+          closeNav();
         }}
       >
         <option value="Dish Type">Dish Type</option>
@@ -73,6 +74,7 @@ const Navigations = ({ setShowNavigation, showNavigation }) => {
         onChange={(e) => {
           recipeByMealType(e.target.value);
           navigate("/recipes");
+          closeNav();
         }}
       >
         <option value="Category">Meal Type</option>
@@ -89,6 +91,7 @@ const Navigations = ({ setShowNavigation, showNavigation }) => {
         onChange={(e) => {
           recipeByDietType(e.target.value);
           navigate("/recipes");
+          closeNav();
         }}
       >
         <option value="diet-type">Diet Type</option>
