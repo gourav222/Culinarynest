@@ -4,6 +4,7 @@ import "./Dashboard.css";
 import expand from "../../images/Three-line.png";
 import { useState } from "react";
 import close from "../../images/close.png";
+import Navigations from "./Navigations";
 const Header = () => {
   const [showNavigation, setShowNavigation] = useState(false);
 
@@ -13,17 +14,17 @@ const Header = () => {
         <li>
           <div className="header-section-1">
             <img className="chef-icon" src={chef} alt="" />
-            <h3>Our Recipes</h3>
+            <h3>
+              <Link to={"/"}>DishDive</Link>
+            </h3>
           </div>
         </li>
 
         <div className="header-section-2">
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link to={"/recipes"}>Recipes</Link>
-          </li>
+          <Navigations
+            setShowNavigation={setShowNavigation}
+            showNavigation={showNavigation}
+          />
         </div>
 
         {!showNavigation ? (
@@ -37,12 +38,13 @@ const Header = () => {
             <button onClick={() => setShowNavigation(false)}>
               <img src={close} alt="" />
             </button>
-            <li>
-              <Link to={"/"}>Home</Link>
-            </li>
-            <li>
-              <Link to={"/recipes"}>Recipes</Link>
-            </li>
+
+            <div>
+              <Navigations
+                setShowNavigation={setShowNavigation}
+                showNavigation={showNavigation}
+              />
+            </div>
           </div>
         )}
       </ul>

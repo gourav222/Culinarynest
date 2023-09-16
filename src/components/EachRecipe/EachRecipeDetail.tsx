@@ -10,6 +10,7 @@ const EachRecipeDetail = () => {
   const recipeSource = recipes[id].recipe.source;
   const ingridentList = recipes[id].recipe.ingredientLines;
   const recipeUrl = recipes[id].recipe.url;
+  const recipePreparationTime = recipes[id].recipe.totalTime;
   return (
     <div className="each-recipe-detail">
       <div className="recipe-image-back-to-recipe">
@@ -39,6 +40,11 @@ const EachRecipeDetail = () => {
               </div>
             );
           })}
+        </div>
+
+        <div className="recipe-preparations-time">
+            <h2>Preparation Time</h2>
+            <span>{recipePreparationTime}-min</span>
         </div>
       </div>
     </div>

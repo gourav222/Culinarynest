@@ -6,7 +6,7 @@ export const Dashboard = () => {
     <div className="dashboard">
       <div className="main-section">
         <div>
-          <h1>OUR RECIPES</h1>
+          <h2>Search your recipe by our recipe</h2>
           <button
             onClick={() => {
               navigate("/recipes");

@@ -87,6 +87,13 @@
     padding: 2%;
     border-bottom: 1px solid rgb(185, 185, 185);
 }
+.recipe-preparations-time span{
+  border: 1px solid rgb(185, 185, 185);
+  border-radius: 4px;
+  left: 1%;
+  position: relative;
+  padding: 1%;
+}
 @media (max-width: 650px) {
   .each-recipe-detail {
     flex-direction: column;

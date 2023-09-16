@@ -1,4 +1,5 @@
 import "./Recipe.css";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { Link } from "react-router-dom";
 export const RecipeCard = ({
   recipeImage,
@@ -10,7 +11,12 @@ export const RecipeCard = ({
   return (
     <div className="recipe-card">
       <div className="recipe-image">
-        <img src={recipeImage} alt="" />
+        <LazyLoadImage
+          effect="blur"
+          src={recipeImage}
+          placeholderSrc={recipeImage}
+          alt=""
+        />
       </div>
 
       <div className="recipe-details">

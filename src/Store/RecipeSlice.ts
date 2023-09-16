@@ -24,7 +24,45 @@ export const getRecipeByIngridents = createAsyncThunk(
     // console.log("{}{}GHJKGJ{}{}{}",payload.ingridentList.length)
 
     const data = await axios.get(ingridentUrl);
-    console.log("76890", data);
+    // console.log("76890", data);
+    return data;
+  }
+);
+
+export const getRecipeByDishType = createAsyncThunk(
+  "recipe/fetchRecipeByDishType",
+  async (payload: any) => {
+    let dishTypeUrl =
+      "https://api.edamam.com/api/recipes/v2?type=public&app_id=3c648243&app_key=cf1978e920d1219b7716f49e7854ffb5&dishType=";
+
+    dishTypeUrl += payload.dishType;
+
+    // console.log(payload)
+
+    const data = await axios.get(dishTypeUrl);
+    // console.log("@@@@@", data);
+    return data;
+  }
+);
+
+export const getRecipeByMealType = createAsyncThunk(
+  "recipe/fetchRecipeByMealType",
+  async (payload: any) => {
+    let mealTypeUrl =
+      "https://api.edamam.com/api/recipes/v2?type=public&app_id=3c648243&app_key=cf1978e920d1219b7716f49e7854ffb5&mealType=";
+    mealTypeUrl += payload.mealType;
+    const data = await axios.get(mealTypeUrl);
+    return data;
+  }
+);
+
+export const getRecipeByDietType = createAsyncThunk(
+  "recipe/fetchRecipeByDietType",
+  async (payload: any) => {
+    let dietTypeUrl =
+      "https://api.edamam.com/api/recipes/v2?type=public&app_id=3c648243&app_key=cf1978e920d1219b7716f49e7854ffb5&diet=";
+    dietTypeUrl += payload.dietType;
+    const data = await axios.get(dietTypeUrl);
     return data;
   }
 );
@@ -34,9 +72,19 @@ export const recipeSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getRecipeByIngridents.fulfilled, (state, action) => {
-      state.recipeData = action.payload.data.hits;
-    });
+    builder
+      .addCase(getRecipeByIngridents.fulfilled, (state, action) => {
+        state.recipeData = action.payload.data.hits;
+      })
+      .addCase(getRecipeByDishType.fulfilled, (state, action) => {
+        state.recipeData = action.payload.data.hits;
+      })
+      .addCase(getRecipeByMealType.fulfilled, (state, action) => {
+        state.recipeData = action.payload.data.hits;
+      })
+      .addCase(getRecipeByDietType.fulfilled, (state, action) => {
+        state.recipeData = action.payload.data.hits;
+      });
   },
 });
 
